@@ -14,5 +14,6 @@ public class Other extends Module {
     public void setup() {
         SusMod.settingsManager.rSetting(new Setting("ClickGUI Sound", this, false));
         SusMod.settingsManager.rSetting(new Setting("SusChat", this, true));
+        SusMod.settingsManager.rSetting(new Setting("Break Chat", this, false));
     }
 }

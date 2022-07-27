@@ -49,7 +49,6 @@ public class SusMod implements ModInitializer {
     public static String configPath;
 
     public static CommandLoader cmdLoader;
-
     @Override
     public void onInitialize() {
         otherSus = new ArrayList<String>();

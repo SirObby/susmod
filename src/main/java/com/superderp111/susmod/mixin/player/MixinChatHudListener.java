@@ -73,12 +73,15 @@ public class MixinChatHudListener {
             }
         }
 
-        if (messageType.toString() != MessageType.CHAT.toString()) {
-            MinecraftClient.getInstance().inGameHud.getChatHud().addMessage(message);
-        } else {
-            MinecraftClient.getInstance().inGameHud.getChatHud().queueMessage(message);
-        }
+        if(SusMod.settingsManager.getSettingByName("Break Chat").getValBoolean()) {
 
-        callbackInfo.cancel();
+            if (messageType.toString() != MessageType.CHAT.toString()) {
+                MinecraftClient.getInstance().inGameHud.getChatHud().addMessage(message);
+            } else {
+                MinecraftClient.getInstance().inGameHud.getChatHud().queueMessage(message);
+            }
+
+            callbackInfo.cancel();
+        }
     }
 }
