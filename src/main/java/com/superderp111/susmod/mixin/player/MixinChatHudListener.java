@@ -73,11 +73,11 @@ public class MixinChatHudListener {
             }
         }
 
-        /*if (messageType != MessageType.CHAT) {
+        if (messageType.toString() != MessageType.CHAT.toString()) {
             MinecraftClient.getInstance().inGameHud.getChatHud().addMessage(message);
         } else {
             MinecraftClient.getInstance().inGameHud.getChatHud().queueMessage(message);
-        }*/
+        }
 
         callbackInfo.cancel();
     }
