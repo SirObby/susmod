@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "susmod",
+  "version": "${version}",
+
+  "name": "SusMod",
+  "description": "This mod is so sussy!",
+  "authors": [
+    "SuperDerp111"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/susmod/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.superderp111.susmod.SusMod"
+    ]
+  },
+  "mixins": [
+    "susmod.mixins.json"
+  ],
+
+  "depends": {
+    "minecraft": "1.19"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.superderp111.susmod.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "render.MixinEntityRenderer",
+    "render.MixinInGameHud",
+    "player.MixinMinecraftClient",
+    "player.MixinPlayerListHud",
+    "player.MixinClientPlayerEntity",
+    "render.MixinGameMenuScreen"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
