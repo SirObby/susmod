@@ -8,6 +8,7 @@ import com.superderp111.susmod.server.SusModServer;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.ChatHudListener;
 //import net.minecraft.network.MessageType;
+import net.minecraft.network.message.MessageSender;
 import net.minecraft.network.message.MessageType;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
@@ -17,6 +18,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
@@ -25,10 +27,15 @@ import java.util.UUID;
 public class MixinChatHudListener {
 
     @Inject(method={"onChatMessage"}, at = @At("HEAD"), cancellable = true)
-    public void onChatMessage(MessageType messageType, Text message, UUID senderUuid, CallbackInfo callbackInfo) {
+    public void onChatMessage(MessageType messageType, Text message, @Nullable MessageSender sender, CallbackInfo callbackInfo) {
         if(message.getString().equalsIgnoreCase("◆ Welcome back to DiamondFire! ◆")) {
             if (SusMod.moduleManager.getModuleByName("Flight").isToggled()) {
-                MinecraftClient.getInstance().player.sendChatMessage("/fly");
+                try {
+                    MinecraftClient.getInstance().player.sendChatMessage("/fly");
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }
         for (JsonElement user : SusModServer.users) {

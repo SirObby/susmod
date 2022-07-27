@@ -11,7 +11,8 @@
     "player.MixinMinecraftClient",
     "player.MixinPlayerListHud",
     "player.MixinClientPlayerEntity",
-    "render.MixinGameMenuScreen"
+    "render.MixinGameMenuScreen",
+    "player.MixinChatHudListener"
   ],
   "injectors": {
     "defaultRequire": 1
