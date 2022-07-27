@@ -139,6 +139,8 @@ public class SusMod implements ModInitializer {
         map.put("settings", settings);
         map.put("panels", panels);
 
+        System.out.println(gson.toJson(map).toString());
+
         try {
             File configFile = new File(path + "/config.json");
             configFile.createNewFile();

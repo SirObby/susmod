@@ -1,6 +1,7 @@
 package com.superderp111.susmod.command;
 
 import com.superderp111.susmod.command.commands.SusChatCommand;
+import com.superderp111.susmod.command.commands.SusSaveCommand;
 import com.superderp111.susmod.util.ILoader;
 //import net.fabricmc.fabric.api.client.command.v1.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
@@ -10,6 +11,7 @@ public class CommandLoader implements ILoader {
     @Override
     public void load() throws NoSuchFieldException, IllegalAccessException {
         register(new SusChatCommand());
+        register(new SusSaveCommand());
         //register(new SusGiveCommand());
     }
 
