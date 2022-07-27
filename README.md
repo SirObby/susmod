@@ -15,5 +15,5 @@ Suschat is a chat feature in SUSMOD that lets you chat with other players using 
 Q: How to contribute for this awesome mod?\
 A: Just make a Pull Request! We will merge cool features if you make a pull request!
 
-Q: Is this hacks?
+Q: Is this hacks?\
 A: No lmao. This is entirely legit.
