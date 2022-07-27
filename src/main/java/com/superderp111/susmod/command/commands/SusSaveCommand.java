@@ -20,7 +20,7 @@ public class SusSaveCommand extends Command {
         cd.register(ClientCommandManager.literal("sussave").executes(ctx -> {
             SusMod.saveConfig(SusMod.configPath);
             return 0;
-        })
+            })
         );
     }
 
