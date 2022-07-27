@@ -27,7 +27,7 @@ public class Panel {
         this.title = ititle;
         this.x = ix;
         this.y = iy;
-        this.width = iwidth;
+       this.width = iwidth;
         this.height = iheight;
         this.extended = iextended;
         this.dragging = false;

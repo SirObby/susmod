@@ -19,6 +19,13 @@ public class ModuleManager {
         // SETTINGS
         modules.add(new HUD());
         modules.add(new Other());
+
+        // COMBAt
+        modules.add(new Module("Killaura", Category.COMBAT));
+        modules.add(new Module("Crystalaura", Category.COMBAT));
+        modules.add(new Module("Reach", Category.COMBAT));
+        modules.add(new Module("Criticals", Category.COMBAT));
+        modules.add(new Module("Aimbot", Category.COMBAT));
     }
 
     public ArrayList<Module> getModules() {
