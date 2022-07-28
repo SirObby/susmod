@@ -132,15 +132,23 @@ public abstract class MixinInGameHud {
         // cactus king more like cactus shit
         if(SusMod.settingsManager.getSettingByName("Cactus Counter").getValBoolean()) {
             int cacti = 0;
+            int goldencacti = 0;
             for (ItemStack is : MinecraftClient.getInstance().player.getInventory().main) {
+                if(is.getItem() == Items.YELLOW_DYE) {
+                    goldencacti += is.getCount();
+                }
                 if(is.getItem() == Items.GREEN_DYE) {
                     cacti += is.getCount();
                 }
             }
             ItemStack offhand = MinecraftClient.getInstance().player.getInventory().offHand.get(0);
+            if(offhand.getItem() == Items.YELLOW_DYE) {
+                goldencacti += offhand.getCount();
+            }
             if(offhand.getItem() == Items.GREEN_DYE) {
                 cacti += offhand.getCount();
             }
+            FontUtil.drawTotalCenteredStringWithShadow(matrices, "Golden Cactus Counter: " + goldencacti, scaledWidth / 2, scaledHeight - 85, ColorUtil.getClickGUIColor().getRGB());
             FontUtil.drawTotalCenteredStringWithShadow(matrices, "Cactus Counter: " + cacti, scaledWidth / 2, scaledHeight - 78, ColorUtil.getClickGUIColor().getRGB());
         }
     }
