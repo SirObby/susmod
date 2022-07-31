@@ -8,7 +8,6 @@
   "client": [
     "render.MixinEntityRenderer",
     "render.MixinInGameHud",
-    "player.MixinMinecraftClient",
     "player.MixinPlayerListHud",
     "player.MixinClientPlayerEntity",
     "render.MixinGameMenuScreen",
